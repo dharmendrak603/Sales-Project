@@ -1,0 +1,65 @@
+Questions:-
+
+1. Sales qarterly ?
+2. Profit Quarterly ?
+3. Sales category wise ?
+4. Sales country wise ?
+5. Sales Device-type wise ?
+6. corelation between sales_manager vs sales_represenatives ?
+
+
+Initial transformation steps:-
+
+1. import data into df.
+
+2. change datatype accrodingly:-
+	country	 str
+	category str
+	customer_name	 str
+	sales_manager str	
+	sales_rep	str
+	device_type	str
+	order_id str
+	order_value_EUR 	 numeric
+	cost 	numeric
+	date	date	
+
+3. Fix the date format to MM/dd/yyyy
+4. Create below columns.
+	profit = order_val-cost
+	profit_% = profit/order_val*100
+
+4. Desribute the data into three more tables other than Sales_tbl .
+	i)	Revenue
+			country
+			order_value_EUR
+			date
+			order_id
+	ii) Profit_table
+		country
+		date
+		category
+		profit
+		profit_%
+		
+			
+	iii) Corelation_tbl
+		sales_manager
+		sales_rep
+		order_value_EUR
+		date
+		
+	
+	
+	
+	
+
+
+5. connect powerBI desktop with postgreSQL DB and load data to powerBI.
+
+6. Now , let's work on the questions.
+	1. Sales qarterly ? - DONE
+	2. Profit Quarterly ? 
+	3. Sales category wise ?
+	4. Sales country wise ?
+	5. corelation between sales and Profit % ?
